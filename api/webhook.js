@@ -6,7 +6,7 @@ const VERIFY_TOKEN = "your_unique_verify_token";
 
 app.use(bodyParser.json());
 
-// Webhook verification
+// Webhook Verification (GET)
 app.get("/api/webhook", (req, res) => {
   const mode = req.query["hub.mode"];
   const token = req.query["hub.verify_token"];
@@ -19,6 +19,7 @@ app.get("/api/webhook", (req, res) => {
   }
 });
 
+// Webhook Event Handling (POST)
 app.post("/api/webhook", (req, res) => {
   console.log("Webhook event received:", req.body);
   res.status(200).send("EVENT_RECEIVED");
