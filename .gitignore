@@ -1,0 +1,29 @@
+
+# Node.js Dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Environment Variables
+.env
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Build Output
+dist/
+build/
+
+# Vercel Configuration (if needed locally only)
+.vercel/
+
+# IDE/Editor Specific Files
+.vscode/
+.idea/
+
+# Temporary Files
+*.tmp
+*.swp
