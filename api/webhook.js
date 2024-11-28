@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
-const VERIFY_TOKEN = "IGQWRQNmVXRmpfdHZANMlVldXpnWFJhVG5ncXk0c0hkU1hhaFhfMm9BNHlpZAzV2em5HcHlwdW1oNGFGbU9ldU1Nc1NSV25XVXRFaVFNVGd3ZAGZAiVXlwU0tXN1RSSV9TSzF3bW1jeWhjbUt0T0Y2V2dpU2tYbHFaOW8ZD";
+const VERIFY_TOKEN = "your_unique_verify_token"; // Replace with your actual token
 
 app.use(bodyParser.json());
 
@@ -25,4 +25,8 @@ app.post("/api/webhook", (req, res) => {
   res.status(200).send("EVENT_RECEIVED");
 });
 
-module.exports = app;
+// Define the port and start the server
+const PORT = process.env.PORT || 3001; // Change the port here if required
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
